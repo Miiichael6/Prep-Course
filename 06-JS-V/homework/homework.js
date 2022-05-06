@@ -87,7 +87,7 @@ function crearInstanciaPersona(nombre, apellido, edad, dir) {
   //Recibirá los valores "Juan", "Perez", 22, "Saavedra 123"
   //para sus respectivas propiedades
   //Devolver la nueva persona creada
-  const nuevaPersona = new Persona("Juan", "Perez", 22, "Saavedra 123");
+  const nuevaPersona = new Persona(nombre, apellido, edad, dir);
   return nuevaPersona;
 }
 
@@ -96,7 +96,7 @@ function agregarMetodo() {
   //el nombre y la edad de la persona y devuelve:
   //Ej: "Juan, 22 años"
   Persona.prototype.datos = function () {
-    return this.nombre + ", " + this.edad + " años";
+    return `${this.nombre}, ${this.edad} años`;
   };
 }
 
